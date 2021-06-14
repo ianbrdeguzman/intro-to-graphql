@@ -1,6 +1,9 @@
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
 import schema from './schema/schema.js';
+import connectMongoose from './mongoose.js';
+
+await connectMongoose();
 
 const app = express();
 
