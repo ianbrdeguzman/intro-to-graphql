@@ -40,7 +40,7 @@ const AddBook = () => {
     };
 
     return (
-        <div>
+        <div className='add-book'>
             <form onSubmit={handleSubmitOnClick}>
                 <h2>Add a new book</h2>
                 <div>

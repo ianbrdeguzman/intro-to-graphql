@@ -9,14 +9,15 @@ const BookDetails = ({ bookId }) => {
         data: book,
     } = useQuery(GET_BOOK, {
         variables: {
-            id: bookId,
+            id: bookId || '60c7f260a377a515b83c888d',
         },
     });
 
     if (loading) return <h2>Loading book details...</h2>;
+    if (error) return <h2>Error: {error}</h2>;
 
     return (
-        <div>
+        <div className='book-details'>
             <h2>{book?.book.title}</h2>
             <p>Genre: {book?.book.genre}</p>
             <p>

@@ -10,38 +10,57 @@ body {
     font-family: 'Nunito', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #e5e5e5;
 }
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
-header {
-    padding: 1rem;
+.App div:last-child {
+    padding: 2rem;
 }
-header,
-main {
-    width: 90vw;
-    margin: 0 auto;
+.booklist div {
+    padding: 2rem;
 }
-div form {
-    margin: 1rem 0;
+.booklist div:first-child h1 {
+    text-align: center;
 }
-div form div {
-    margin: 1rem 0;
+.booklist div:first-child > ul {
+    list-style: none;
 }
-input,
-select {
+.booklist div:first-child > ul li {
+    display: inline-block;
     padding: 0.5rem;
-    width: 189px;
+    margin: 0.5rem;
+    color: deeppink;
+    border: 1px solid deeppink;
+    border-radius: 0.2rem;
 }
-.booklist {
-    display: flex;
+.book-details {
+    color: #fff;
+    background-color: deeppink;
+    padding: 2rem;
 }
-.booklist ul {
-    margin-right: 2rem;
-    list-style: inside;
+.book-details ul {
+    list-style: none;
 }
-.booklist ul li:hover {
-    cursor: pointer;
-    text-decoration: underline;
+@media (min-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+    .booklist {
+        display: flex;
+        min-height: 100vh;
+    }
+    .booklist div {
+        flex: 0.5;
+    }
+    .add-book {
+        padding: 0;
+    }
+    .App div:last-child form {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+    }
 }

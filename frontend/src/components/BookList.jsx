@@ -12,16 +12,22 @@ const BookList = () => {
 
     return (
         <div className='booklist'>
-            <ul>
-                {books?.books.map((book) => {
-                    return (
-                        <li key={book.id} onClick={() => setBookId(book.id)}>
-                            {book.title}
-                        </li>
-                    );
-                })}
-            </ul>
-            {bookId && <BookDetails bookId={bookId} />}
+            <div>
+                <h1>Intro to GraphQL</h1>
+                <ul>
+                    {books?.books.map((book) => {
+                        return (
+                            <li
+                                key={book.id}
+                                onClick={() => setBookId(book.id)}
+                            >
+                                {book.title}
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
+            <BookDetails bookId={bookId} />
         </div>
     );
 };
